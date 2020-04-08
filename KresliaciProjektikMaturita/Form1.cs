@@ -62,9 +62,7 @@ namespace KresliaciProjektikMaturita
                 decimal x = -b;
                 x = x / (2 * a);
 
-                //TODO:Do some rounding
-
-                lQuadratic.Text = QUADRATIC_TEXT + $"Rovnica má jedno riešenie {{{x}}}.";
+                lQuadratic.Text = QUADRATIC_TEXT + $"Rovnica má jedno riešenie {{{Math.Round(x, 5)}}}.";
             }
             else {
                 decimal x1 = -b + (decimal)Math.Sqrt((double)discriminant);
@@ -72,9 +70,7 @@ namespace KresliaciProjektikMaturita
                 x1 = x1 / (2 * a);
                 x2 = x2 / (2 * a);
 
-                //TODO:Do some rounding
-
-                lQuadratic.Text = QUADRATIC_TEXT + $"Rovnica má dve riešenia {{{x1}, {x2}}}.";
+                lQuadratic.Text = QUADRATIC_TEXT + $"Rovnica má dve riešenia {{{Math.Round(x1, 5)}, {Math.Round(x2, 5)}}}.";
             }
 
         }
